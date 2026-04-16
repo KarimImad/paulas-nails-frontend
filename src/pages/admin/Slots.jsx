@@ -97,7 +97,7 @@ export default function AdminSlots() {
       </div>
 
       {showForm && (
-        <div className="card p-6 mb-8 border-cream-200">
+        <div className="card p-6 mb-8 border-cream-200 overflow-hidden">
           <h2 className="font-serif text-lg text-cream-900 mb-5">Créer un créneau</h2>
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
@@ -107,7 +107,7 @@ export default function AdminSlots() {
                 value={date}
                 min={getTomorrow()}
                 onChange={e => setDate(e.target.value)}
-                className="input-field w-full sm:max-w-xs"
+                className="input-field w-full max-w-full sm:max-w-xs"
                 required
               />
             </div>
@@ -118,7 +118,7 @@ export default function AdminSlots() {
                 type="time"
                 value={time}
                 onChange={e => setTime(e.target.value)}
-                className="input-field w-full sm:max-w-xs"
+                className="input-field w-full max-w-full sm:max-w-xs"
                 required
               />
             </div>
