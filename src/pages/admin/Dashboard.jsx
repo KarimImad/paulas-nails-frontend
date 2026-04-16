@@ -71,6 +71,7 @@ export default function AdminDashboard() {
           value={todayReservations.length}
           sub="rendez-vous du jour"
           color="bg-amber-50"
+          to="/admin/reservations"
           icon={<svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>}
         />
         <StatCard
@@ -78,6 +79,7 @@ export default function AdminDashboard() {
           value={weekCount}
           sub="rendez-vous à venir"
           color="bg-violet-50"
+          to="/admin/reservations"
           icon={<svg className="w-5 h-5 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>}
         />
         <StatCard
@@ -85,6 +87,7 @@ export default function AdminDashboard() {
           value={clientCount}
           sub="inscrites"
           color="bg-pink-50"
+          to="/admin/reservations"
           icon={<svg className="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
         />
         <StatCard
@@ -92,6 +95,7 @@ export default function AdminDashboard() {
           value={availableSlotsCount}
           sub="disponibles"
           color="bg-cream-100"
+          to="/admin/creneaux"
           icon={<svg className="w-5 h-5 text-cream-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>}
         />
       </div>
@@ -156,11 +160,16 @@ export default function AdminDashboard() {
             </div>
           </div>
 
-          <div className="card p-5">
-            <h2 className="font-sans font-medium text-cream-800 text-sm mb-3">Catalogue</h2>
+          <Link to="/admin/services" className="card p-5 group hover:shadow-hover hover:-translate-y-0.5 transition-all duration-200 block">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="font-sans font-medium text-cream-800 text-sm">Catalogue</h2>
+              <svg className="w-4 h-4 text-cream-300 group-hover:text-cream-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
             <p className="text-3xl font-serif text-cream-900 mb-1">{services.length}</p>
             <p className="text-xs font-sans text-cream-400">prestations disponibles</p>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
