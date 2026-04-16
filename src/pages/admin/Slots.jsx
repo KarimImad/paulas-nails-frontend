@@ -107,7 +107,7 @@ export default function AdminSlots() {
                 value={date}
                 min={getTomorrow()}
                 onChange={e => setDate(e.target.value)}
-                className="input-field max-w-xs"
+                className="input-field w-full sm:max-w-xs"
                 required
               />
             </div>
@@ -118,12 +118,12 @@ export default function AdminSlots() {
                 type="time"
                 value={time}
                 onChange={e => setTime(e.target.value)}
-                className="input-field max-w-xs"
+                className="input-field w-full sm:max-w-xs"
                 required
               />
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <button type="button" onClick={() => { setShowForm(false); setTime(''); }} className="btn-secondary">
                 Annuler
               </button>
