@@ -27,9 +27,12 @@ export default function Navbar() {
 
   const navLinks = [
     { to: '/', label: 'Accueil' },
-    ...(user?.phone ? [
-      { to: '/reservation', label: 'Réserver' },
-      { to: '/mes-reservations', label: 'Mes rendez-vous' },
+    ...(user ? [
+      { to: '/bienvenue', label: 'Mon espace' },
+      ...(user.phone ? [
+        { to: '/reservation', label: 'Réserver' },
+        { to: '/mes-reservations', label: 'Mes rendez-vous' },
+      ] : []),
     ] : []),
   ];
 
