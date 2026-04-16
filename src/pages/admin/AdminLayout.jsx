@@ -146,7 +146,7 @@ export default function AdminLayout() {
           </div>
         </header>
 
-        <main className="flex-1 overflow-y-auto bg-cream-50">
+        <main className="flex-1 overflow-y-auto overflow-x-hidden bg-cream-50">
           <Outlet />
         </main>
       </div>
