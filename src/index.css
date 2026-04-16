@@ -39,6 +39,10 @@
 
   .input-field {
     @apply w-full px-4 py-3 bg-white border border-cream-200 rounded-xl text-cream-900 placeholder-cream-400 text-sm font-sans transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cream-300 focus:border-cream-400;
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    max-width: 100%;
   }
 
   .label {

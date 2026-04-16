@@ -82,7 +82,7 @@ export default function AdminSlots() {
   const dates = Object.keys(grouped).sort();
 
   return (
-    <div className="p-6 lg:p-8">
+    <div className="p-4 sm:p-6 lg:p-8">
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-2xl font-serif font-light text-cream-900">Créneaux</h1>
@@ -97,7 +97,7 @@ export default function AdminSlots() {
       </div>
 
       {showForm && (
-        <div className="card p-6 mb-8 border-cream-200">
+        <div className="card p-4 sm:p-6 mb-8 border-cream-200">
           <h2 className="font-serif text-lg text-cream-900 mb-5">Créer un créneau</h2>
           <form onSubmit={handleSubmit} className="space-y-5 w-full">
             <div>
