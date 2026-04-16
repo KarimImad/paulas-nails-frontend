@@ -113,7 +113,7 @@ export default function Login() {
           <Divider />
 
           <a
-            href={`${import.meta.env.VITE_API_URL}/api/auth/google`}
+            href="/api/auth/google"
             className="flex items-center justify-center gap-3 w-full py-3 px-4 border border-cream-200 rounded-xl bg-white hover:bg-cream-50 transition-colors text-sm font-sans font-medium text-cream-700"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
